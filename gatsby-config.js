@@ -1,17 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Digital Resume for Darin Levesque',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "GatsbyJS",
-        short_name: "GatsbyJS",
+        name: "Resume for Darin Levesque",
+        short_name: "DL Resume",
         start_url: "/",
         background_color: "#f7f0eb",
-        theme_color: "#a2466c",
+        theme_color: "#FF6633",
         display: "minimal-ui",
         icons: [
           {
