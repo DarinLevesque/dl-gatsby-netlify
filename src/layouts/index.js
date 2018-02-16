@@ -9,7 +9,7 @@ const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet>
       <html lang="en" />
-      <title>"Home | Digital Resume for Darin Levesque</title>
+      <title>Home | Digital Resume for Darin Levesque</title>
     </Helmet>
     <Navbar />
     <div>{children()}</div>
