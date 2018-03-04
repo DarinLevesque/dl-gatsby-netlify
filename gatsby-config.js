@@ -33,6 +33,7 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-sass',
+    'gatsby-plugin-fastclick',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -53,13 +54,30 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [],
+        plugins: [
+          {
+            resolve: "gatsby-remark-smartypants",
+            options: {
+              dashes: "oldschool",
+            },
+          },
+        ],
       },
     },
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
+        // Puts tracking script in the head instead of the body
+        head: true,
+        // Setting this parameter is optional
+        //anonymize: true,
       },
     },
   ],
