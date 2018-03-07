@@ -1,5 +1,6 @@
 import React from 'react';
 import graphql from 'graphql';
+import Example from '../components/Modal';
 import Content, { HTMLContent } from '../components/Content';
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
@@ -13,6 +14,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
             <div className="section">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">{title}</h2>
               <PageContent className="content" content={content} />
+              <Example />
             </div>
           </div>
         </div>
