@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Digital Resume for Darin Levesque',
+    siteUrl: `https://new.darinlevesque.com`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -31,6 +32,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sitemap`,
     'gatsby-plugin-offline',
     'gatsby-plugin-sass',
     'gatsby-plugin-fastclick',

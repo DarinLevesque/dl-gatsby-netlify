@@ -5,19 +5,27 @@ import Helmet from 'react-helmet';
 import Navbar from '../components/Navbar';
 import './all.sass';
 
+
 const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet>
-      <html lang="en" />
-      <title>Home | Digital Resume for Darin Levesque</title>
-    </Helmet>
+<div> 
+  <Helmet>
+    <html lang="en"/>
+    <title>Home | Digital Resume for Darin Levesque</title>
+  </Helmet>
+  
+  <div id="outer-container">
     <Navbar />
-    <div>{children()}</div>
+    <main id="page-wrap">
+      <div>{children()}</div>
+    </main>
   </div>
+</div>
 );
+
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
 };
+
 
 export default TemplateWrapper;
