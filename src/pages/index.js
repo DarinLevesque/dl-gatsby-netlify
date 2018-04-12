@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import Script from "react-load-script";
 const isBrowser = typeof window !== "undefined";
@@ -6,19 +7,6 @@ const TypeIt = isBrowser ? require("typeit") : undefined;
 import graphql from "graphql";
 
 export default class IndexPage extends React.Component {
-  handleScriptLoad() {
-    if (typeof window !== `undefined` && window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-    window.netlifyIdentity.init();
-  }
-
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
@@ -84,6 +72,14 @@ export default class IndexPage extends React.Component {
   }
 }
 
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array
+    })
+  })
+};
+
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
@@ -91,11 +87,13 @@ export const pageQuery = graphql`
         node {
           excerpt(pruneLength: 400)
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
-            path
           }
         }
       }
