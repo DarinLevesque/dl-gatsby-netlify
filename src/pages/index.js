@@ -9,11 +9,6 @@ export default class IndexPage extends React.Component {
 
     return (
       <section className="section">
-        <p id="typed" />
-        <Script
-          url="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          onLoad={() => this.handleScriptLoad()}
-        />
         <div className="container">
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
