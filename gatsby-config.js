@@ -35,7 +35,6 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     "gatsby-plugin-offline",
     "gatsby-plugin-sass",
-    "gatsby-plugin-fastclick",
     {
       resolve: "gatsby-source-filesystem",
       options: {
