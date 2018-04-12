@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Digital Resume for Darin Levesque",
-    siteUrl: `https://new.darinlevesque.com`
+    title: "Digital Resume for Darin Levesque"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
