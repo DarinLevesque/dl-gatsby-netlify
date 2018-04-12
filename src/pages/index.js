@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "gatsby-link";
 import Script from "react-load-script";
-import TypeIt from "typeit";
+const isBrowser = typeof window !== "undefined";
+const TypeIt = isBrowser ? require("typeit") : undefined;
 import graphql from "graphql";
 
 export default class IndexPage extends React.Component {
