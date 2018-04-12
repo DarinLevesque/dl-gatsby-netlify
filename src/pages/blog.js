@@ -4,19 +4,6 @@ import Script from "react-load-script";
 import graphql from "graphql";
 
 export default class BlogPage extends React.Component {
-  handleScriptLoad() {
-    if (typeof window !== `undefined` && window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-    window.netlifyIdentity.init();
-  }
-
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
@@ -24,10 +11,6 @@ export default class BlogPage extends React.Component {
     return (
       <section className="section">
         <p id="example4" />
-        <Script
-          url="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          onLoad={() => this.handleScriptLoad()}
-        />
         <div className="container">
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>

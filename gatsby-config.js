@@ -81,6 +81,17 @@ module.exports = {
         // Setting this parameter is optional
         //anonymize: true,
       }
+    },
+    {
+      resolve: "gatsby-plugin-purify-css",
+      options: {
+        /* Defaults */
+        styleId: "gatsby-inlined-css",
+        purifyOptions: {
+          info: true,
+          minify: true
+        }
+      }
     }
   ]
 };

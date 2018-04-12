@@ -1,5 +1,4 @@
 import React from "react";
-import graphql from "graphql";
 import Content, { HTMLContent } from "../components/Content";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
@@ -36,8 +35,8 @@ export default ({ data }) => {
 };
 
 export const aboutPageQuery = graphql`
-  query AboutPage($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query AboutPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
