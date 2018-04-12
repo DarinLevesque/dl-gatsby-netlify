@@ -1,5 +1,4 @@
 import React from "react";
-import graphql from "graphql";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
@@ -124,8 +123,8 @@ export default ({ data }) => {
 };
 
 export const productPageQuery = graphql`
-  query ProductPage($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query ProductPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         image

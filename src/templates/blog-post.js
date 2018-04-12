@@ -1,5 +1,4 @@
 import React from "react";
-import graphql from "graphql";
 import Helmet from "react-helmet";
 import Content, { HTMLContent } from "../components/Content";
 
@@ -8,13 +7,13 @@ export const BlogPostTemplate = ({
   contentComponent,
   description,
   title,
-  helmet
+  helmet,
 }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || Content
 
   return (
     <section className="section">
-      {helmet || ""}
+      {helmet || ''}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -30,8 +29,8 @@ export const BlogPostTemplate = ({
   );
 };
 
-export default ({ data }) => {
-  const { markdownRemark: post } = data;
+export default props => {
+  const { markdownRemark: post } = props.data
 
   return (
     <BlogPostTemplate
@@ -41,12 +40,13 @@ export default ({ data }) => {
       helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
       title={post.frontmatter.title}
     />
-  );
-};
+  )
+}
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query BlogPostByID($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
@@ -55,4 +55,3 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
