@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "./all.sass";
 
 const TemplateWrapper = ({ children }) => (
@@ -12,7 +13,9 @@ const TemplateWrapper = ({ children }) => (
       <title>Home | Digital Resume for Darin Levesque</title>
       <script
         defer
-        src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+        src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+        integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"
       />
     </Helmet>
 
@@ -20,6 +23,7 @@ const TemplateWrapper = ({ children }) => (
       <Navbar />
       <main id="page-wrap">
         <div>{children()}</div>
+        <Footer />
       </main>
     </div>
   </div>
