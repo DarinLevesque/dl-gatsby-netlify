@@ -9163,6 +9163,10 @@ react-burger-menu@^2.4.2:
     prop-types "^15.6.1"
     snapsvg-cjs "0.0.6"
 
+react-custom-scroll@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/react-custom-scroll/-/react-custom-scroll-3.1.1.tgz#2c17fe9dd735777d6332c2e4d388f3e58ff87390"
+
 react-datetime@^2.11.0:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/react-datetime/-/react-datetime-2.14.0.tgz#c7859c5b765275d7980f1cca27c03a727ff9ccef"
