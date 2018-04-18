@@ -4,13 +4,6 @@ import Link from "gatsby-link";
 const isBrowser = typeof window !== "undefined";
 const TypeIt = isBrowser ? require("typeit") : undefined;
 
-const instance = new TypeIt("#typed", {
-  strings: ["This is a great string.", "But here is a better one."],
-  speed: 40,
-  breakLines: false,
-  autoStart: false
-});
-
 export default class IndexPage extends React.Component {
   render() {
     return (
@@ -25,3 +18,10 @@ export default class IndexPage extends React.Component {
     );
   }
 }
+
+const instance = new TypeIt("#typed", {
+  strings: ["This is a great string.", "But here is a better one."],
+  speed: 40,
+  breakLines: false,
+  autoStart: false
+});
