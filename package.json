@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Darin Levesque",
   "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.0.19",
     "bulma": "^0.7.0",
     "gatsby": "^1.9.248",
     "gatsby-link": "^1.6.40",

@@ -22,10 +22,10 @@ const styles = {
     width: "24px"
   },
   bmCross: {
-    background: "#bdc3c7"
+    background: "#777777"
   },
   bmMenu: {
-    background: "#373a47",
+    background: "#e0e0e0",
     padding: "2.5em 1.5em 0",
     fontSize: "1.15em"
   },
@@ -78,87 +78,75 @@ class Navbar extends React.Component {
           isOpen={this.state.menuOpen}
           onStateChange={state => this.handleStateChange(state)}
         >
-          <Link
-            id="home"
-            className="menu-item"
-            to="/"
-            onClick={() => this.closeMenu()}
-          >
-            Home
-          </Link>
-          <Link
-            id="blog"
-            className="menu-item"
-            to="/blog"
-            onClick={() => this.closeMenu()}
-          >
-            Blog
-          </Link>
-          <Link
-            id="about"
-            className="menu-item"
-            to="/about"
-            onClick={() => this.closeMenu()}
-          >
-            About
-          </Link>
-          <a
-            id="contact"
-            className="menu-item"
-            href="/contact"
-            onClick={() => this.closeMenu()}
-          >
-            Contact
-          </a>
           <aside className="menu">
+            <Link id="home" to="/" onClick={() => this.closeMenu()}>
+              <i class="fas fa-home" />
+            </Link>
+
             <p className="menu-label">General</p>
             <ul className="menu-list">
               <li>
-                <a>Dashboard</a>
+                <Link id="about" to="/about" onClick={() => this.closeMenu()}>
+                  <i class="fas fa-user" /> About Me
+                </Link>
               </li>
               <li>
-                <a>Customers</a>
-              </li>
-            </ul>
-            <p className="menu-label">Administration</p>
-            <ul className="menu-list">
-              <li>
-                <a>Team Settings</a>
-              </li>
-              <li>
-                <a className="is-active">Manage Your Team</a>
-                <ul>
-                  <li>
-                    <a>Members</a>
-                  </li>
-                  <li>
-                    <a>Plugins</a>
-                  </li>
-                  <li>
-                    <a>Add a member</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Invitations</a>
-              </li>
-              <li>
-                <a>Cloud Storage Environment Settings</a>
-              </li>
-              <li>
-                <a>Authentication</a>
+                <Link to="/" onClick={() => this.closeMenu()}>
+                  <i class="fas fa-cogs" /> Projects
+                </Link>
               </li>
             </ul>
-            <p className="menu-label">Transactions</p>
+            <Link
+              to="/blog"
+              className="menu-label"
+              onClick={() => this.closeMenu()}
+            >
+              Blog
+            </Link>
             <ul className="menu-list">
               <li>
-                <a>Payments</a>
+                <Link to="/" onClick={() => this.closeMenu()}>
+                  <i class="fas fa-fighter-jet" /> Professional
+                </Link>
               </li>
               <li>
-                <a>Transfers</a>
+                <Link to="/" onClick={() => this.closeMenu()}>
+                  <i class="fas fa-users" /> Family
+                </Link>
               </li>
               <li>
-                <a>Balance</a>
+                <Link to="/" onClick={() => this.closeMenu()}>
+                  Invitations
+                </Link>
+              </li>
+            </ul>
+            <p className="menu-label">Resume</p>
+            <ul className="menu-list">
+              <li>
+                <Link to="/education" onClick={() => this.closeMenu()}>
+                  <i class="fas fa-graduation-cap" /> Education
+                </Link>
+              </li>
+              <li>
+                <Link to="/experience" onClick={() => this.closeMenu()}>
+                  <i class="fas fa-briefcase" /> Experience
+                </Link>
+              </li>
+              <li>
+                <Link to="/" onClick={() => this.closeMenu()}>
+                  <i class="fas fa-chart-line" /> Skills
+                </Link>
+              </li>
+            </ul>
+            <ul className="menu-list">
+              <li>
+                <Link
+                  id="contact"
+                  href="/contact"
+                  onClick={() => this.closeMenu()}
+                >
+                  <i class="fas fa-envelope" /> Contact
+                </Link>
               </li>
             </ul>
           </aside>

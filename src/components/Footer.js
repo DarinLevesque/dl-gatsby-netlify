@@ -8,23 +8,21 @@ const Footer = () => {
         <div className="content has-text-centered">
           <nav className="level is-mobile">
             <div className="level-item has-text-centered">
+              <i className="fab fa-facebook" />
+            </div>
+            <div className="level-item has-text-centered">
               <span className="icon is-medium">
-                <i className="fas fa-facebook" />
+                <i className="fab fa-twitter" />
               </span>
             </div>
             <div className="level-item has-text-centered">
               <span className="icon is-medium">
-                <i className="fas fa-twitter" />
+                <i className="fab fa-linkedin" />
               </span>
             </div>
             <div className="level-item has-text-centered">
               <span className="icon is-medium">
-                <i className="fas fa-linkedin" />
-              </span>
-            </div>
-            <div className="level-item has-text-centered">
-              <span className="icon is-medium">
-                <i className="fas fa-github" />
+                <i className="fab fa-github" />
               </span>
             </div>
           </nav>

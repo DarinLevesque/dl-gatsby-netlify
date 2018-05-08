@@ -65,7 +65,7 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <div className="tile is-ancestor">
               <div className="tile is-parent">
-                <article className="tile is-child box">
+                <article className="tile is-child box animated fadeIn">
                   <p className="title">Title</p>
                   <p className="subtitle">smaller title</p>
                   <div className="content">
