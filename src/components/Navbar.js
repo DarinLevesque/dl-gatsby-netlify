@@ -163,20 +163,6 @@ class Navbar extends React.Component {
             </ul>
           </aside>
         </Menu>
-        <Headroom>
-        <nav className="navbar" role="navigation" aria-label="main navigation">
-          <div className="navbar-brand">
-            <Link className="navbar-item" to="/">
-              <img
-                src={logo}
-                alt="Darin Levesque Logo"
-                width="112"
-                height="50"
-              />
-            </Link>
-          </div>
-        </nav>
-        </Headroom>
       </div>
     );
   }
