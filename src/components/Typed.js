@@ -1,5 +1,7 @@
 import React from "react";
-import TypeIt from "typeit";
+const isBrowser = typeof window !== "undefined";
+const TypeIt = isBrowser ? require("typeit") : undefined;
+// import TypeIt from "typeit";
 
 class Typed extends React.Component {
   constructor(props) {
