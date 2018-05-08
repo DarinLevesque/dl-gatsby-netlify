@@ -3,9 +3,31 @@ import Link from "gatsby-link";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer has-background-grey-lighter is-bold">
       <div className="container">
         <div className="content has-text-centered">
+          <nav className="level is-mobile">
+            <div className="level-item has-text-centered">
+              <span className="icon is-medium">
+                <i className="fas fa-facebook" />
+              </span>
+            </div>
+            <div className="level-item has-text-centered">
+              <span className="icon is-medium">
+                <i className="fas fa-twitter" />
+              </span>
+            </div>
+            <div className="level-item has-text-centered">
+              <span className="icon is-medium">
+                <i className="fas fa-linkedin" />
+              </span>
+            </div>
+            <div className="level-item has-text-centered">
+              <span className="icon is-medium">
+                <i className="fas fa-github" />
+              </span>
+            </div>
+          </nav>
           <p>
             <strong>Digital Resume</strong> by{" "}
             <a href="https://darinlevesque.com">Darin Levesque</a>. The source

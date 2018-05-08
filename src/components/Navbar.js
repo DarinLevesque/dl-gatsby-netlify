@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import { pushRotate as Menu } from "react-burger-menu";
+import Headroom from "react-headroom";
 
 import github from "../img/github-icon.svg";
 import logo from "../img/DarinLWEBP.webp";
@@ -162,6 +163,7 @@ class Navbar extends React.Component {
             </ul>
           </aside>
         </Menu>
+        <Headroom>
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
             <Link className="navbar-item" to="/">
@@ -174,6 +176,7 @@ class Navbar extends React.Component {
             </Link>
           </div>
         </nav>
+        </Headroom>
       </div>
     );
   }

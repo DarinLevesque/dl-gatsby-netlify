@@ -10,7 +10,7 @@ const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet>
       <html lang="en" />
-      <title>Home | Digital Resume for Darin Levesque</title>
+      <title>Digital Resume for Darin Levesque</title>
       <script
         defer
         src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
