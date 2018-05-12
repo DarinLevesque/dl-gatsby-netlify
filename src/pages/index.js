@@ -12,21 +12,30 @@ export default class IndexPage extends React.Component {
         <section className="hero is-medium is-dark is-bold">
           <div className="hero-body">
             <div className="container">
-              <h1 className="title">My Background</h1>
-              <h2 className="subtitle">
-                <Typed
-                  strings={[
-                    "Hi, my name is Darin.",
-                    "I'm a Test Resource Manager for NAVAIR"
-                  ]}
-                  startDelay={2500}
-                  nextStringDelay={[2500, 2000]}
-                  lifeLike={true}
-                  cursorChar="_"
-                  breakLines={false}
-                  autoStart={false}
-                />
-              </h2>
+              <article className="media">
+                <figure className="media-left">
+                  <p className="image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/128x128.png" />
+                  </p>
+                </figure>
+                <div className="media-content">
+                  <h1 className="title">Who am I?</h1>
+                  <h2 className="subtitle">
+                    <Typed
+                      strings={[
+                        "Hi, my name is Darin.",
+                        "I'm a Test Resource Manager for NAVAIR"
+                      ]}
+                      startDelay={2500}
+                      nextStringDelay={[2500, 2000]}
+                      lifeLike={true}
+                      cursorChar="_"
+                      breakLines={false}
+                      autoStart={false}
+                    />
+                  </h2>
+                </div>
+              </article>
             </div>
           </div>
         </section>

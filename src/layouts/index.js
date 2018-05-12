@@ -28,9 +28,11 @@ const TemplateWrapper = ({ children }) => (
 
     <div id="outer-container">
       <Navbar />
-      <main id="page-wrap">
-        <Header />
-        <div>{children()}</div>
+      <main className="site" id="page-wrap">
+        <div className="site-content">
+          <Header />
+          <div>{children()}</div>
+        </div>
         <Footer />
       </main>
     </div>

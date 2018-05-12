@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 const Footer = () => {
   return (
@@ -8,21 +9,27 @@ const Footer = () => {
         <div className="content has-text-centered">
           <nav className="level is-mobile">
             <div className="level-item has-text-centered">
-              <i className="fab fa-facebook" />
-            </div>
-            <div className="level-item has-text-centered">
               <span className="icon is-medium">
-                <i className="fab fa-twitter" />
+                <OutboundLink href="https://facebook.com/darinlevesque">
+                  <i className="fab fa-lg fa-facebook" />
+                </OutboundLink>
               </span>
             </div>
             <div className="level-item has-text-centered">
               <span className="icon is-medium">
-                <i className="fab fa-linkedin" />
+                <OutboundLink href="https://www.twitter.com/darinlevesque">
+                  <i className="fab fa-lg fa-twitter" />
+                </OutboundLink>
               </span>
             </div>
             <div className="level-item has-text-centered">
               <span className="icon is-medium">
-                <i className="fab fa-github" />
+                <i className="fab fa-lg fa-linkedin" />
+              </span>
+            </div>
+            <div className="level-item has-text-centered">
+              <span className="icon is-medium">
+                <i className="fab fa-lg fa-github" />
               </span>
             </div>
           </nav>

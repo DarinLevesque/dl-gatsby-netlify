@@ -13,6 +13,37 @@ const Header = () => {
             <img src={logo} alt="Darin Levesque Logo" width="112" height="50" />
           </Link>
         </div>
+        <div className="navbar-menu">
+          <Link to="/about" className="navbar-item is-active">
+            About
+          </Link>
+          <Link to="/blog" className="navbar-item">
+            Blog
+          </Link>
+          <div className="navbar-item has-dropdown is-hoverable">
+            <Link to="/resume" className="navbar-link">
+              Resume
+            </Link>
+            <div className="navbar-dropdown ">
+              <Link to="/experience" className="navbar-item">
+                Experience
+              </Link>
+              <Link to="/education" className="navbar-item">
+                Education
+              </Link>
+              <Link to="/skills" className="navbar-item">
+                Skills
+              </Link>
+              <hr className="navbar-divider" />
+              <Link to="/timeline" className="navbar-item">
+                Timeline
+              </Link>
+            </div>
+          </div>
+          <Link to="/contact" className="navbar-item">
+            Contact
+          </Link>
+        </div>
       </nav>
     </Headroom>
   );

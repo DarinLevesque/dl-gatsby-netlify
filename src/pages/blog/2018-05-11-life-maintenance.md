@@ -1,12 +1,14 @@
 ---
 templateKey: blog-post
-path: making-sense
-title: Making sense of the SCAA’s new Flavor Wheel
-date: 2016-12-17T15:04:10.000Z
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+path: life-maintenance
+title: Life Maintenance
+date: 2018-05-11T14:12:10.000Z
+description: Maintaining your life between personal & professional success can be daunting. Here are tips that will help you perform your best.
 tags:
-  - flavor
-  - tasting
+  - life
+  - personal
+  - professional
+  -
 ---
 
 ![flavor wheel](/img/flavor_wheel.jpg)

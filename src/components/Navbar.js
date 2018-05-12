@@ -49,7 +49,7 @@ class Navbar extends React.Component {
     };
   }
 
-  // This keeps your state in sync with the opening/closing of the menu
+  // This keeps state in sync with the opening/closing of the menu
   // via the default means, e.g. clicking the X, pressing the ESC key etc.
   handleStateChange(state) {
     this.setState({ menuOpen: state.isOpen });
@@ -69,7 +69,7 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="is-hidden-desktop">
         <Menu
           styles={styles}
           pageWrapId={"page-wrap"}
@@ -80,19 +80,19 @@ class Navbar extends React.Component {
         >
           <aside className="menu">
             <Link id="home" to="/" onClick={() => this.closeMenu()}>
-              <i class="fas fa-home" />
+              <i className="fas fa-home" />
             </Link>
 
             <p className="menu-label">General</p>
             <ul className="menu-list">
               <li>
                 <Link id="about" to="/about" onClick={() => this.closeMenu()}>
-                  <i class="fas fa-user" /> About Me
+                  <i className="fas fa-user" /> About Me
                 </Link>
               </li>
               <li>
-                <Link to="/" onClick={() => this.closeMenu()}>
-                  <i class="fas fa-cogs" /> Projects
+                <Link to="/projects" onClick={() => this.closeMenu()}>
+                  <i className="fas fa-cogs" /> Projects
                 </Link>
               </li>
             </ul>
@@ -106,12 +106,12 @@ class Navbar extends React.Component {
             <ul className="menu-list">
               <li>
                 <Link to="/" onClick={() => this.closeMenu()}>
-                  <i class="fas fa-fighter-jet" /> Professional
+                  <i className="fas fa-fighter-jet" /> Professional
                 </Link>
               </li>
               <li>
                 <Link to="/" onClick={() => this.closeMenu()}>
-                  <i class="fas fa-users" /> Family
+                  <i className="fas fa-users" /> Family
                 </Link>
               </li>
               <li>
@@ -124,17 +124,17 @@ class Navbar extends React.Component {
             <ul className="menu-list">
               <li>
                 <Link to="/education" onClick={() => this.closeMenu()}>
-                  <i class="fas fa-graduation-cap" /> Education
+                  <i className="fas fa-graduation-cap" /> Education
                 </Link>
               </li>
               <li>
                 <Link to="/experience" onClick={() => this.closeMenu()}>
-                  <i class="fas fa-briefcase" /> Experience
+                  <i className="fas fa-briefcase" /> Experience
                 </Link>
               </li>
               <li>
                 <Link to="/" onClick={() => this.closeMenu()}>
-                  <i class="fas fa-chart-line" /> Skills
+                  <i className="fas fa-chart-line" /> Skills
                 </Link>
               </li>
             </ul>
@@ -142,10 +142,10 @@ class Navbar extends React.Component {
               <li>
                 <Link
                   id="contact"
-                  href="/contact"
+                  to="/contact"
                   onClick={() => this.closeMenu()}
                 >
-                  <i class="fas fa-envelope" /> Contact
+                  <i className="fas fa-envelope" /> Contact
                 </Link>
               </li>
             </ul>

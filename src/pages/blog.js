@@ -18,27 +18,36 @@ export default class BlogPage extends React.Component {
           {posts
             .filter(post => post.node.frontmatter.templateKey === "blog-post")
             .map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: "1px solid #eaecee", padding: "2em 4em" }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.frontmatter.path}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.frontmatter.path}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </div>
+              <section className="section" key={post.id}>
+                <div className="card">
+                  <div className="card-image">
+                    <figure className="is-64x64" />
+                  </div>
+                  <header className="card-header">
+                    <p className="card-header-title">
+                      <Link
+                        className="has-text-primary"
+                        to={post.frontmatter.path}
+                      >
+                        {post.frontmatter.title}
+                      </Link>
+                      <small className="card-header-icon">
+                        {post.frontmatter.date}
+                      </small>
+                    </p>
+                  </header>
+                  <div className="card-content">
+                    <p>{post.excerpt}</p>
+                  </div>
+                  <footer className="card-footer">
+                    <div className="card-footer-item">
+                      <Link className="button" to={post.frontmatter.path}>
+                        Keep Reading →
+                      </Link>
+                    </div>
+                  </footer>
+                </div>
+              </section>
             ))}
         </div>
       </section>

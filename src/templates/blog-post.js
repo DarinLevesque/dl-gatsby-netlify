@@ -16,15 +16,29 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <div>
       {helmet || ""}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
+            <section className="section">
+              <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+                {title}
+              </h1>
+              {tags && tags.length ? (
+                <div className="tags ">
+                  {tags.map(tag => (
+                    <span
+                      className="tag is-rounded is-capitalized"
+                      key={tag + `tag`}
+                    >
+                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    </span>
+                  ))}
+                </div>
+              ) : null}
+              <p>{description}</p>
+            </section>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -41,7 +55,7 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
