@@ -1778,9 +1778,9 @@ bulma-timeline@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/bulma-timeline/-/bulma-timeline-2.0.3.tgz#49b6899f03c4781c8e75a914ecfb63bae443511a"
 
-bulma-tooltip@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/bulma-tooltip/-/bulma-tooltip-1.0.4.tgz#c40cc4d884f0e37c16d8a8a6a0ed7e4c7091a932"
+bulma-tooltip@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/bulma-tooltip/-/bulma-tooltip-1.0.5.tgz#c0048929086a28ae3d7958ad6e71dd5ce216cc13"
 
 bulma@^0.7.1:
   version "0.7.1"
