@@ -2,8 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import Typed from "../components/Typed";
-// const isBrowser = typeof window !== "undefined";
-// const TypeIt = isBrowser ? require("typeit") : undefined;
+// const isBrowser = typeof window !== "undefined"; const TypeIt = isBrowser ?
+// require("typeit") : undefined;
+
+import Profile from "../img/darinprofile.jpg";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -14,25 +16,21 @@ export default class IndexPage extends React.Component {
             <div className="container">
               <article className="media">
                 <figure className="media-left">
-                  <p className="image is-64x64">
-                    <img src="https://bulma.io/images/placeholders/128x128.png" />
+                  <p className="image is-128x128">
+                    <img src={Profile}/>
                   </p>
                 </figure>
                 <div className="media-content">
                   <h1 className="title">Who am I?</h1>
                   <h2 className="subtitle">
                     <Typed
-                      strings={[
-                        "Hi, my name is Darin.",
-                        "I'm a Test Resource Manager for NAVAIR"
-                      ]}
+                      strings={["Hi, my name is Darin.", "I'm a Test Resource Manager for NAVAIR"]}
                       startDelay={2500}
                       nextStringDelay={[2500, 2000]}
                       lifeLike={true}
                       cursorChar="_"
                       breakLines={false}
-                      autoStart={false}
-                    />
+                      autoStart={false}/>
                   </h2>
                 </div>
               </article>
@@ -46,22 +44,19 @@ export default class IndexPage extends React.Component {
                 <div className="column is-two-thirds">
                   <h1>Welcome</h1>
                   <p>
-                    I've been working in high-demand aviation environments since
-                    2004. My journey started as a CH-46 Seaknight (Phrog) Crew
-                    Chief then transtioned to the V-22 Osprey in 2006 and
-                    decided to entere civilian service in 2014.
+                    I've been working in high-demand aviation environments since 2004. My journey
+                    started as a CH-46 Seaknight (Phrog) Crew Chief then transtioned to the V-22
+                    Osprey in 2006 and decided to entere civilian service in 2014.
                   </p>
                   <p>
-                    In my ten years on active duty in the Marine Corps I
-                    achieved the following:
+                    In my ten years on active duty in the Marine Corps I achieved the following:
                   </p>
                   <ul>
                     <li>Weapons and Tactics Instructor</li>
                     <li>Night Systems Instructor</li>
                     <li>Crew Resource Management Instructor</li>
                     <li>
-                      Naval Air Training & Operating Procedures Standardization
-                      Instructor
+                      Naval Air Training & Operating Procedures Standardization Instructor
                     </li>
                     <li>Collateral Duty Inspector</li>
                   </ul>
