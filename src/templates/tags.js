@@ -1,67 +1,73 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 
-// Components
-import Link from "gatsby-link";
+class TagRoute extends React.Component {
+  render() {
+    const posts = this.props.data.allMarkdownRemark.edges;
+    const postLinks = posts.forEach(post => (
+      <li key={post.node.fields.slug}>
+        <Link to={post.node.fields.slug}>
+          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
+        </Link>
+      </li>
+    ))
+    const tag = this.props.pathContext.tag
+    const title = this.props.data.site.siteMetadata.title
+    const totalCount = this.props.data.allMarkdownRemark.totalCount
+    const tagHeader = `${totalCount} post${
+    totalCount === 1
+      ? ''
+      : 's'} tagged with “${tag}”`
 
-const Tags = ({pathContext, data}) => {
-  const {tag} = pathContext;
-  const {edges, totalCount} = data.allMarkdownRemark;
-  const tagHeader = `${totalCount} post${
-  totalCount === 1
-    ? ""
-    : "s"} tagged with "${tag}"`;
+    return (
+      <section className="section">
+        <Helmet title={`${tag} | ${title}`}/>
+        <div className="container content">
+          <div className="columns">
+            <div
+              className="column is-10 is-offset-1"
+              style={{
+              marginBottom: '6rem'
+            }}>
+              <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
+              <ul className="taglist">{postLinks}</ul>
+              <p>
+                <Link to="/tags/">Browse all tags</Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+}
 
-  return (
-    <div>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({node}) => {
-          const {path, title} = node.frontmatter;
-          return (
-            <li key={path}>
-              <Link to={path}>{title}</Link>
-            </li>
-          );
-        })}
-      </ul>
-      <Link to="/tags">All tags</Link>
-    </div>
-  );
-};
+export default TagRoute
 
-Tags.propTypes = {
-  pathContext: PropTypes.shape({tag: PropTypes.string.isRequired}),
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      totalCount: PropTypes.number.isRequired,
-      edges: PropTypes.arrayOf(PropTypes.shape({
-        node: PropTypes.shape({
-          frontmatter: PropTypes.shape({path: PropTypes.string.isRequired, title: PropTypes.string.isRequired})
-        })
-      }).isRequired)
-    })
-  })
-};
-
-export default Tags;
-
-export const pageQuery = graphql `
+export const tagPageQuery = graphql `
   query TagPage($tag: String) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMarkdownRemark(
-      limit: 2000
+      limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
-            path
           }
         }
       }
     }
   }
-`;
+`

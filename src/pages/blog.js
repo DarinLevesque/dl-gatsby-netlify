@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import Link from "gatsby-link";
-import graphql from "graphql";
 
 export default class BlogPage extends React.Component {
   render() {
@@ -10,7 +9,6 @@ export default class BlogPage extends React.Component {
 
     return (
       <section className="section">
-        <p id="example4"/>
         <div className="container">
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
@@ -25,7 +23,7 @@ export default class BlogPage extends React.Component {
                   </div>
                   <header className="card-header">
                     <p className="card-header-title">
-                      <Link className="has-text-primary" to={post.frontmatter.path}>
+                      <Link className="has-text-primary" to={post.fields.slug}>
                         {post.frontmatter.title}
                       </Link>
                       <small className="card-header-icon">
@@ -38,7 +36,7 @@ export default class BlogPage extends React.Component {
                   </div>
                   <footer className="card-footer">
                     <div className="card-footer-item">
-                      <Link className="button" to={post.frontmatter.path}>
+                      <Link className="button" to={post.fields.slug}>
                         Keep Reading →
                       </Link>
                     </div>

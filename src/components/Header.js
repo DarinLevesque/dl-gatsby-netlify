@@ -10,7 +10,7 @@ const Header = () => {
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img src={logo} alt="Darin Levesque Logo" width="112" height="50" />
+            <img src={logo} alt="Darin Levesque Logo" width="112" height="50"/>
           </Link>
         </div>
         <div className="navbar-menu">
@@ -25,16 +25,16 @@ const Header = () => {
               Resume
             </Link>
             <div className="navbar-dropdown ">
-              <Link to="/experience" className="navbar-item">
+              <Link to="/resume/experience" className="navbar-item">
                 Experience
               </Link>
-              <Link to="/education" className="navbar-item">
+              <Link to="/resume/education" className="navbar-item">
                 Education
               </Link>
-              <Link to="/skills" className="navbar-item">
+              <Link to="/resume/skills" className="navbar-item">
                 Skills
               </Link>
-              <hr className="navbar-divider" />
+              <hr className="navbar-divider"/>
               <Link to="/timeline" className="navbar-item">
                 Timeline
               </Link>
