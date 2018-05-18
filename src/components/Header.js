@@ -36,7 +36,7 @@ const Header = () => {
               </Link>
               <hr className="navbar-divider"/>
               <Link to="/timeline" className="navbar-item">
-                Timeline
+                <i className="fas fa-download"/>Download
               </Link>
             </div>
           </div>
