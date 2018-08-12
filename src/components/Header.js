@@ -14,39 +14,54 @@ const Header = () => {
           </Link>
         </div>
         <div className="navbar-menu">
-          <Link to="/about" className="navbar-item is-active">
-            About
-          </Link>
-          <Link to="/blog" className="navbar-item">
-            Blog
-          </Link>
-          <div className="navbar-item has-dropdown is-hoverable">
-            <Link to="/resume" className="navbar-link">
-              Resume
+          <div className="navbar-start"></div>
+          <div className="navbar-end">
+            <Link to="/about" className="navbar-item is-active">
+              <i className="fas fa-user"/>{" "}
+              About
             </Link>
-            <div className="navbar-dropdown ">
-              <Link to="/resume/experience" className="navbar-item">
-                Experience
+            <div className="navbar-item has-dropdown is-hoverable">
+              <Link to="/blog" className="navbar-link">
+                Blog
               </Link>
-              <Link to="/resume/education" className="navbar-item">
-                Education
-              </Link>
-              <Link to="/resume/skills" className="navbar-item">
-                Skills
-              </Link>
-              <hr className="navbar-divider"/>
-              <Link to="/timeline" className="navbar-item">
-                <i className="fas fa-download"/>Download
-              </Link>
+              <div className="navbar-dropdown">
+                <Link to="/blog/professional" className="navbar-item">
+                  <i className="fas fa-fighter-jet"/>{" "}
+                  Professional
+                </Link>
+                <Link to="/blog/family" className="navbar-item">
+                  <i className="fas fa-users"/>{" "}Family
+                </Link>
+              </div>
             </div>
+            <div className="navbar-item has-dropdown is-hoverable">
+              <Link to="/resume" className="navbar-link">
+                Resume
+              </Link>
+              <div className="navbar-dropdown">
+                <Link to="/resume/experience" className="navbar-item">
+                  Experience
+                </Link>
+                <Link to="/resume/education" className="navbar-item">
+                  Education
+                </Link>
+                <Link to="/resume/skills" className="navbar-item">
+                  Skills
+                </Link>
+                <hr className="navbar-divider"/>
+                <Link to="/timeline" className="navbar-item">
+                  <i className="fas fa-download"/>{" "}Download
+                </Link>
+              </div>
+            </div>
+            <Link to="/contact" className="navbar-item">
+              Contact
+            </Link>
           </div>
-          <Link to="/contact" className="navbar-item">
-            Contact
-          </Link>
         </div>
       </nav>
     </Headroom>
-  );
-};
+  )
+}
 
 export default Header;

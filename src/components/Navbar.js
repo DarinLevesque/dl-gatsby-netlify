@@ -2,7 +2,6 @@ import React from "react";
 import Link from "gatsby-link";
 import {pushRotate as Menu} from "react-burger-menu";
 import Headroom from "react-headroom";
-
 import github from "../img/github-icon.svg";
 import logo from "../img/DarinLWEBP.webp";
 
@@ -10,7 +9,7 @@ const styles = {
   bmBurgerButton: {
     position: "fixed",
     width: "26px",
-    height: "20px",
+    height: "15px",
     right: "20px",
     top: "20px"
   },
@@ -37,7 +36,7 @@ const styles = {
     padding: "0.8em"
   },
   bmOverlay: {
-    background: "rgba(0, 0, 0, 0.3)"
+    background: "rgba(0, 0, 0, 0.6)"
   }
 };
 
@@ -151,6 +150,12 @@ class Navbar extends React.Component {
               </li>
             </ul>
           </aside>
+          <footer className="footer has-background-grey-lighter">
+            <div className="content has-text-centered">
+              <i className="fas fa-download"/>{" "}
+              <h6>Resume</h6>
+            </div>
+          </footer>
         </Menu>
       </div>
     );
