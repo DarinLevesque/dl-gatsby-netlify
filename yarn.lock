@@ -544,15 +544,15 @@ babel-core@^6.24.1, babel-core@^6.26.0:
     slash "^1.0.0"
     source-map "^0.5.6"
 
-babel-eslint@^8.2.3:
-  version "8.2.3"
-  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-8.2.3.tgz#1a2e6681cc9bc4473c32899e59915e19cd6733cf"
+babel-eslint@8.2.6:
+  version "8.2.6"
+  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-8.2.6.tgz#6270d0c73205628067c0f7ae1693a9e797acefd9"
   dependencies:
     "@babel/code-frame" "7.0.0-beta.44"
     "@babel/traverse" "7.0.0-beta.44"
     "@babel/types" "7.0.0-beta.44"
     babylon "7.0.0-beta.44"
-    eslint-scope "~3.7.1"
+    eslint-scope "3.7.1"
     eslint-visitor-keys "^1.0.0"
 
 babel-generator@^6.24.1, babel-generator@^6.26.0:
@@ -3158,6 +3158,10 @@ entities@^1.1.1, entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
 
+envinfo@^5.8.1:
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-5.10.0.tgz#503a9774ae15b93ea68bdfae2ccd6306624ea6df"
+
 eol@^0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/eol/-/eol-0.8.1.tgz#defc3224990c7eca73bb34461a56cf9dc24761d0"
@@ -3246,7 +3250,7 @@ escodegen@~1.2.0:
   optionalDependencies:
     source-map "~0.1.30"
 
-eslint-scope@~3.7.1:
+eslint-scope@3.7.1:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-3.7.1.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"
   dependencies:
@@ -3937,9 +3941,9 @@ gatsby-1-config-extract-plugin@^1.0.3:
     babel-runtime "^6.26.0"
     extract-text-webpack-plugin "^1.0.1"
 
-gatsby-cli@^1.1.52:
-  version "1.1.52"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-1.1.52.tgz#1bb09671b774a49202ea5bb90aa49bfeebaa2fc3"
+gatsby-cli@^1.1.58:
+  version "1.1.58"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-1.1.58.tgz#5dda246b9877ab925f6a512f723c20557af22d57"
   dependencies:
     babel-code-frame "^6.26.0"
     babel-runtime "^6.26.0"
@@ -3947,6 +3951,7 @@ gatsby-cli@^1.1.52:
     common-tags "^1.4.0"
     convert-hrtime "^2.0.0"
     core-js "^2.5.0"
+    envinfo "^5.8.1"
     execa "^0.8.0"
     fs-extra "^4.0.1"
     hosted-git-info "^2.5.0"
@@ -3997,13 +4002,12 @@ gatsby-plugin-manifest@^1.0.22:
     bluebird "^3.5.0"
     sharp "^0.20.1"
 
-gatsby-plugin-netlify-cms@^1.0.9:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-1.0.12.tgz#961144f45cf76aaa351b639777635f70a52001e7"
+gatsby-plugin-netlify-cms@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-2.0.1.tgz#1c22c3b4019486436295cfb6ee8180658847dbd8"
   dependencies:
     html-webpack-include-assets-plugin "^1.0.2"
     html-webpack-plugin "^2.30.1"
-    netlify-cms "^1.0.1"
     netlify-identity-widget "^1.4.11"
 
 gatsby-plugin-nprogress@^1.0.14:
@@ -4019,6 +4023,18 @@ gatsby-plugin-offline@^1.0.16:
   dependencies:
     babel-runtime "^6.26.0"
     sw-precache "^5.0.0"
+
+gatsby-plugin-page-creator@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-1.0.1.tgz#6bad33a7f46cb5b87dbdaacc3c1bbd81ac63bc20"
+  dependencies:
+    babel-runtime "^6.26.0"
+    bluebird "^3.5.0"
+    chokidar "^1.7.0"
+    glob "^7.1.1"
+    lodash "^4.17.4"
+    parse-filepath "^1.0.1"
+    slash "^1.0.0"
 
 gatsby-plugin-purify-css@^2.2.1:
   version "2.2.1"
@@ -4164,8 +4180,13 @@ gatsby-transformer-sharp@^1.6.24:
     probe-image-size "^4.0.0"
 
 gatsby@^1.9.261:
+<<<<<<< HEAD
   version "1.9.261"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.261.tgz#ca5352874de3ec359150d1ce592e19ed564d0fc0"
+=======
+  version "1.9.272"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.272.tgz#96582c6640dcdb0c156bd0c373ca339b13ba0399"
+>>>>>>> 6cd2210e68141bfb380e2486c15dfe18bb9f7745
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -4207,9 +4228,10 @@ gatsby@^1.9.261:
     fs-extra "^4.0.1"
     gatsby-1-config-css-modules "^1.0.11"
     gatsby-1-config-extract-plugin "^1.0.3"
-    gatsby-cli "^1.1.52"
+    gatsby-cli "^1.1.58"
     gatsby-link "^1.6.44"
     gatsby-module-loader "^1.0.11"
+    gatsby-plugin-page-creator "^1.0.1"
     gatsby-react-router-scroll "^1.0.17"
     glob "^7.1.1"
     graphql "^0.11.7"
@@ -6846,78 +6868,6 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
-netlify-cms@^1.0.1:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-1.5.0.tgz#f3347fe52680dd7c1adf561298da30749f8125b2"
-  dependencies:
-    classnames "^2.2.5"
-    create-react-class "^15.6.0"
-    diacritics "^1.3.0"
-    fuzzy "^0.1.1"
-    gotrue-js "^0.9.15"
-    gray-matter "^3.0.6"
-    history "^4.7.2"
-    immutable "^3.7.6"
-    is-hotkey "^0.1.1"
-    js-base64 "^2.1.9"
-    js-yaml "^3.10.0"
-    jwt-decode "^2.1.0"
-    localforage "^1.4.2"
-    lodash "^4.13.1"
-    mdast-util-definitions "^1.2.2"
-    mdast-util-to-string "^1.0.4"
-    moment "^2.11.2"
-    prop-types "^15.5.10"
-    react "^16.0.0"
-    react-aria-menubutton "^5.1.0"
-    react-autosuggest "^9.3.2"
-    react-datetime "^2.11.0"
-    react-dnd "^2.5.4"
-    react-dnd-html5-backend "^2.5.4"
-    react-dom "^16.0.0"
-    react-frame-component "^2.0.0"
-    react-immutable-proptypes "^2.1.0"
-    react-modal "^3.1.5"
-    react-redux "^4.4.0"
-    react-router-dom "^4.2.2"
-    react-router-redux "^5.0.0-alpha.8"
-    react-scroll-sync "^0.4.0"
-    react-sortable-hoc "^0.6.8"
-    react-split-pane "^0.1.66"
-    react-textarea-autosize "^5.2.0"
-    react-toggled "^1.1.2"
-    react-topbar-progress-indicator "^2.0.0"
-    react-transition-group "^2.2.1"
-    react-waypoint "^7.1.0"
-    redux "^3.3.1"
-    redux-notifications "^4.0.1"
-    redux-optimist "^0.0.2"
-    redux-thunk "^1.0.3"
-    rehype-parse "^3.1.0"
-    rehype-remark "^2.0.0"
-    rehype-stringify "^3.0.0"
-    remark-parse "^3.0.1"
-    remark-rehype "^2.0.0"
-    remark-stringify "^3.0.1"
-    sanitize-filename "^1.6.1"
-    semaphore "^1.0.5"
-    slate "^0.30.0"
-    slate-edit-list "^0.10.1"
-    slate-edit-table "^0.12.0"
-    slate-plain-serializer "^0.4.0"
-    slate-react "0.10.11"
-    slate-soft-break "^0.6.0"
-    toml-j0.4 "^1.1.1"
-    tomlify-j0.4 "^3.0.0-alpha.0"
-    unified "^6.1.4"
-    unist-builder "^1.0.2"
-    unist-util-visit-parents "^1.1.1"
-    url "^0.11.0"
-    uuid "^3.1.0"
-    what-input "^5.0.3"
-  optionalDependencies:
-    fsevents "^1.0.14"
-
 netlify-cms@^1.7.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-1.8.0.tgz#968c11e166e5ee482d268099baf50d50af701b0c"
@@ -8363,9 +8313,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@^1.12.1:
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.12.1.tgz#c1ad20e803e7749faf905a409d2367e06bbe7325"
+prettier@1.14.1:
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.1.tgz#4ead68e66b5ec9e771de311570c90da822f5a17a"
 
 pretty-bytes@^4.0.2:
   version "4.0.2"
@@ -8769,9 +8719,9 @@ react-modal@^3.1.5:
     prop-types "^15.5.10"
     warning "^3.0.0"
 
-react-obfuscate@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/react-obfuscate/-/react-obfuscate-1.3.3.tgz#2b800c89466f2829f5e96137240228a1afa8f49c"
+react-obfuscate@^2.0.0:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/react-obfuscate/-/react-obfuscate-2.1.4.tgz#ae647207c1a8241b83b6a284a82870260a2298b6"
 
 react-onclickoutside@^6.5.0:
   version "6.7.1"
