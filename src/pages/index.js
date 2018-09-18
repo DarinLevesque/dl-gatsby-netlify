@@ -5,7 +5,7 @@ import Typed from "../components/Typed";
 // const isBrowser = typeof window !== "undefined"; const TypeIt = isBrowser ?
 // require("typeit") : undefined;
 
-import Profile from "../img/darinprofile.jpg";
+import Profile from "../img/darinblur.jpg";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -17,7 +17,7 @@ export default class IndexPage extends React.Component {
               <article className="media">
                 <figure className="media-left">
                   <p className="image is-128x128">
-                    <img src={Profile}/>
+                    <img src={Profile} />
                   </p>
                 </figure>
                 <div className="media-content">
@@ -30,7 +30,7 @@ export default class IndexPage extends React.Component {
                       lifeLike={true}
                       cursorChar="_"
                       breakLines={false}
-                      autoStart={false}/>
+                      autoStart={false} />
                   </h2>
                 </div>
               </article>
