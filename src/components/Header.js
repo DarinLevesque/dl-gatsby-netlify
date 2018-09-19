@@ -17,8 +17,7 @@ const Header = () => {
           <div className="navbar-start"></div>
           <div className="navbar-end">
             <Link to="/about" className="navbar-item is-active">
-              <i className="fas fa-user"/>{" "}
-              About
+              <i className="fas fa-user"/>{" "}About
             </Link>
             <div className="navbar-item has-dropdown is-hoverable">
               <Link to="/blog" className="navbar-link">

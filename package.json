@@ -8,8 +8,8 @@
     "bulma-divider": "^1.0.4",
     "bulma-timeline": "^2.0.3",
     "bulma-tooltip": "^1.0.5",
-    "gatsby": "^1.9.261",
-    "gatsby-image": "^1.0.51",
+    "gatsby": "^1.9.277",
+    "gatsby-image": "^1.0.55",
     "gatsby-link": "^1.6.44",
     "gatsby-plugin-google-analytics": "^1.0.31",
     "gatsby-plugin-manifest": "^1.0.22",
@@ -36,8 +36,8 @@
     "react-headroom": "^2.2.2",
     "react-helmet": "^5.2.0",
     "react-load-script": "0.0.6",
-    "react-obfuscate": "^2.0.0",
-    "typeit": "^5.10.1"
+    "react-obfuscate": "^2.1.7",
+    "typeit": "^5.10.6"
   },
   "keywords": ["gatsby"],
   "license": "MIT",
@@ -52,12 +52,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "babel-eslint": "^8.2.3",
-    "prettier": "^1.13.7"
-=======
     "babel-eslint": "8.2.6",
     "prettier": "1.14.1"
->>>>>>> 6cd2210e68141bfb380e2486c15dfe18bb9f7745
   }
 }

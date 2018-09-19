@@ -5,7 +5,7 @@ import Typed from "../components/Typed";
 // const isBrowser = typeof window !== "undefined"; const TypeIt = isBrowser ?
 // require("typeit") : undefined;
 
-import Profile from "../img/darinprofile.jpg";
+import Profile from "../img/proflpic.png";
 
 export default class IndexPage extends React.Component {
   render() {
