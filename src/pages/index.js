@@ -5,7 +5,11 @@ import Typed from "../components/Typed";
 // const isBrowser = typeof window !== "undefined"; const TypeIt = isBrowser ?
 // require("typeit") : undefined;
 
+<<<<<<< HEAD
 import Profile from "../img/proflpic.png";
+=======
+import Profile from "../img/darinblur.jpg";
+>>>>>>> 9812700b9f5a06153fddd93998ff65a203719c62
 
 export default class IndexPage extends React.Component {
   render() {
@@ -18,7 +22,7 @@ export default class IndexPage extends React.Component {
                 <figure
                   className="media-left column is-offset-one-quarter is-one-quarter animated fadeInLeftBig">
                   <p className="image is-128x128">
-                    <img src={Profile}/>
+                    <img src={Profile} />
                   </p>
                 </figure>
                 <div className="media-content column is-one-half">
@@ -31,7 +35,7 @@ export default class IndexPage extends React.Component {
                       lifeLike={true}
                       cursorChar="_"
                       breakLines={false}
-                      autoStart={false}/>
+                      autoStart={false} />
                   </h2>
                 </div>
               </article>
