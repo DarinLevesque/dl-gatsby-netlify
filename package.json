@@ -19,9 +19,9 @@
     "gatsby-plugin-purify-css": "^2.2.1",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-sass": "^1.0.26",
-    "gatsby-plugin-sharp": "^1.6.44",
+    "gatsby-plugin-sharp": "^2.0.5",
     "gatsby-plugin-sitemap": "^1.2.23",
-    "gatsby-remark-images": "^1.5.63",
+    "gatsby-remark-images": "^2.0.1",
     "gatsby-remark-prismjs": "^2.0.2",
     "gatsby-remark-smartypants": "^1.4.12",
     "gatsby-source-filesystem": "^1.5.36",
@@ -37,9 +37,12 @@
     "react-helmet": "^5.2.0",
     "react-load-script": "0.0.6",
     "react-obfuscate": "^2.1.7",
-    "typeit": "^5.10.6"
+    "typeit": "^5.10.6",
+    "snyk": "^1.104.2"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -47,12 +50,14 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-eslint": "8.2.6",
     "prettier": "1.14.1"
-  }
+  },
+  "snyk": true
 }
