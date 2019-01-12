@@ -37,7 +37,7 @@
     "react-helmet": "^5.2.0",
     "react-load-script": "0.0.6",
     "react-obfuscate": "^2.1.7",
-    "typeit": "^5.10.6"
+    "typeit": "^6.0.0"
   },
   "keywords": ["gatsby"],
   "license": "MIT",
