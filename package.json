@@ -33,7 +33,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-burger-menu": "^2.4.4",
-    "react-headroom": "^2.2.2",
+    "react-headroom": "^3.0.0",
     "react-helmet": "^5.2.0",
     "react-load-script": "0.0.6",
     "react-obfuscate": "^2.1.7",
