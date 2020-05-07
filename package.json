@@ -37,9 +37,12 @@
     "react-helmet": "^5.2.0",
     "react-load-script": "0.0.6",
     "react-obfuscate": "^2.1.7",
-    "typeit": "^5.10.6"
+    "typeit": "^5.10.6",
+    "snyk": "^1.319.1"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -47,12 +50,14 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-eslint": "8.2.6",
     "prettier": "1.14.1"
-  }
+  },
+  "snyk": true
 }
